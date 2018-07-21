@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="RealmApp.Views.ClientPage"
+			 Title="{Binding Title}">
+	<ContentPage.Content>
+		<StackLayout Padding="5">
+
+			<Entry Text="{Binding Client.Name}" Placeholder="Name" />
+			<Entry Text="{Binding Client.Email}" Placeholder="Email" />
+			<Entry Text="{Binding Client.Department}" Placeholder="Department" />
+
+			<Button Text="Save" Command="{Binding SaveCommand}" />
+			<Button Text="Cancel" Command="{Binding CancelCommand}" />
+			<Button Text="Delete" Command="{Binding DeleteCommand}" BackgroundColor="Red" TextColor="White" />
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+	
